@@ -1,10 +1,17 @@
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap/modal/modal.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TestFormComponent } from './test-form/test-form.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CalendarModule } from 'angular-calendar';
+import { NgbModalStack } from '@ng-bootstrap/ng-bootstrap/modal/modal-stack';
+import { ScrollBar } from '@ng-bootstrap/ng-bootstrap/util/scrollbar';
 
 @NgModule({
   declarations: [
@@ -14,9 +21,17 @@ import { NavbarComponent } from './navbar/navbar.component';
     NavbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    CalendarModule.forRoot(),
+    NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    NgbModal,
+    NgbModalStack,
+    ScrollBar
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
