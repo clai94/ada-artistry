@@ -1,26 +1,66 @@
-.navbar {
-  font-size: 1.25em;
-  background-color: honeydew;
-}
-ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
+.navbar-default{
+	border: 0;
+	background-color: transparent;
+	font-family: 'Montserrat', sans-serif;
 }
 
-li {
-float: left;
+.navbar-default .navbar-header .navbar-brand{
+	color: #d2d2d2;
+	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
 }
 
-li a {
-display: block;
-color: black;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
+.navbar-default .navbar-header .navbar-brand:hover,
+.navbar-default .navbar-header .navbar-brand:focus {
+    color: #8b8b8b;
 }
 
-li a:hover {
-background-color: grey;
+.nav.navbar-nav.navbar-right li a{
+	color: #d2d2d2;
+}
+
+.nav.navbar-nav.navbar-right li a:hover,
+.nav.navbar-nav.navbar-right li a:focus{
+	color: #8b8b8b;
+}
+
+.navbar.solid {
+	background-color: #fff;
+	transition: background-color 1s ease 0s;
+	color: #000000;
+}
+
+.navbar.solid.navbar-default .navbar-header .navbar-brand{
+	color: #8b8b8b;
+}
+
+.navbar.solid.navbar-default .navbar-header .navbar-brand:hover,
+.navbar.solid.navbar-default .navbar-header .navbar-brand:focus {
+    color: #d2d2d2;
+}
+
+.nav.solid.nav.navbar-nav.navbar-right li a{
+	color: #8b8b8b;
+}
+
+.nav.solid.navbar-nav.navbar-right li a:hover,
+.nav.solid.navbar-nav.navbar-right li a:focus{
+	color: #d2d2d2;
+}
+
+
+#about{
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+
+@media(max-width:768px) {
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+        font-size: 12px;
+    }
+
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+        font-size: 18px;
+    }
 }
