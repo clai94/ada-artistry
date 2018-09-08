@@ -1,16 +1,90 @@
-<div className=".container">
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <ul className="navbar-nav .navbar-right">
-        <li className="nav-item active">
-          <a className="nav-link" href="/home">
-            home
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-main-1">
+  <a class="navbar-brand" href="#"><i class="fas fa-eye"></i>3<i class="fas fa-eye"></i><br>@browswithada
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="">
+          <i class="fa fa-home"></i>
+          home
+          <span class="sr-only">(current)</span>
           </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/projects">
-              about
-          </a>
-        </li>
-      </ul>
-    </nav>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about">
+          <i class="fa fa-info-circle">
+            <!-- <span class="badge badge-danger">11</span> -->
+          </i>
+          about
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/booking">
+          <i class="fa fa-calendar-alt">
+            <!-- <span class="badge badge-danger">11</span> -->
+          </i>
+          booking
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/faq">
+          <i class="fa fa-question-circle">
+            <!-- <span class="badge badge-danger">11</span> -->
+          </i>
+          faq
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/gallery">
+          <i class="fa fa-images">
+            <!-- <span class="badge badge-danger">11</span> -->
+          </i>
+          gallery
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/aftercare">
+          <i class="fa fa-exclamation-triangle">
+            <!-- <span class="badge badge-danger">11</span> -->
+          </i>
+          aftercare
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/policies">
+          <i class="fa fa-book">
+            <!-- <span class="badge badge-danger">11</span> -->
+          </i>
+          policies
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact">
+          <i class="fa fa-envelope">
+            <!-- <span class="badge badge-danger">11</span> -->
+          </i>
+          contact
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/rates">
+          <i class="fa fa-money-bill">
+            <!-- <span class="badge badge-danger">11</span> -->
+          </i>
+          rates
+        </a>
+      </li>
+    </ul>
+
   </div>
+</nav>

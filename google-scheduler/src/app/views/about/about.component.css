@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300');
 
-.bg-main-1 {
-  background-color: pink;
-}
-
 .container {
-  font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
