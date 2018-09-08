@@ -1,3 +1,4 @@
+import { LandingComponent } from './views/landing/landing.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { PolicyComponent } from './views/policy/policy.component';
 import { AftercareComponent } from './views/aftercare/aftercare.component';
@@ -10,7 +11,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RatesComponent } from './views/rates/rates.component';
 
 const routes: Routes = [
-  { path: '', component: TestFormComponent },
+  { path: '', component: LandingComponent },
   { path: 'booking', component: TestFormComponent },
   { path: 'about', component: AboutComponent},
   { path: 'faq' , component: FaqComponent},
