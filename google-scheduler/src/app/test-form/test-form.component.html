@@ -1,37 +1,87 @@
-<div class=".container">
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="panel panel-default">
-          <div class="panel-heading">
-            Request a Booking
-          </div>
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-lg-6">
-                  <form role="form" method="post" action="https://script.google.com/macros/s/AKfycbxrZdSrah88Qah8Ksm8bBcXMPiZpVXlXc4An4MSKQ/exec">
-                    <div class="form-group">
-                      <label>First Name</label>
-                      <input required name="firstName" type="text" class="form-control" placeholder="ex: john">
-                      <label>Last Name</label>
-                      <input required name="lastName" type="text" class="form-control" placeholder="ex: smith">
-                      <label>Phone Number</label>
-                      <input required name="phone" type="tel" class="form-control" placeholder="ex: 604-123-4567">
-                      <label>Email</label>
-                      <input required type="email" name="email" class="form-control" placeholder="ex: email@email.com">
-                      <label>Date</label>
-                      <input required name="date" type="date" class="form-control" placeholder="date of booking">
-                      <label>Requested Time</label>
-                      <input required name="time" type="time" class="form-control" placeholder="time of booking">
-                      <hr>
-                      <input class="btn btn-info" type="submit" value="✓">
-                      <input style="float: right;" class="btn btn-danger" type="reset" value="X">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-                    </div>
-                  </form>
-                </div> <!-- col-log-6 -->
-              </div> <!-- row -->
-            </div> <!-- panel-body -->
-          </div> <!-- panel panel-default -->
-        </div> <!-- col-lg-12 -->
-      </div> <!-- row -->
-    </div> <!-- .container -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<div class="container">
+    <h2 class="text-center">Welcome!</h2>
+	<div class="row justify-content-center">
+		<div class="col-12 col-md-8 col-lg-6 pb-5">
+
+
+                    <!--Form with header-->
+
+                    <form role="form" method="post" action="https://script.google.com/macros/s/AKfycbxrZdSrah88Qah8Ksm8bBcXMPiZpVXlXc4An4MSKQ/exec">
+                      <div class="card rounded-0">
+                            <div class="card-header p-0">
+                                <div class="bg-main-1 text-white text-center py-2">
+                                    <h3><i class="fa fa-envelope"></i> Request a Booking</h3>
+                                    <p class="m-0">Fill out the info below to request a booking!</p>
+                                </div>
+                            </div>
+                            <div class="card-body p-3">
+
+                                <!--Body-->
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
+                                        </div>
+                                        <input type="text" [(ngModel)]='firstName' class="form-control" id="first_name" name="first_name" placeholder="first name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
+                                        </div>
+                                        <input type="text" [(ngModel)]='lastName' class="form-control" id="last_name" name="last_name" placeholder="last name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class=" fa fas fa-phone text-info"></i></div>
+                                        </div>
+                                        <input type="text" [(ngModel)]='phone' class="form-control" id="phone" name="phone" placeholder="phone number" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-envelope text-info"></i></div>
+                                        </div>
+                                        <input type="email" [(ngModel)]='email' class="form-control" id="email" name="email" placeholder="email" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-calendar-alt text-info"></i></div>
+                                        </div>
+                                        <input required [(ngModel)]='date' name="date" type="date" class="form-control" placeholder="date of booking">
+                                      </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-clock text-info"></i></div>
+                                        </div>
+                                        <input required [(ngModel)]='time' name="time" type="time" class="form-control" placeholder="time of booking">
+                                      </div>
+                                </div>
+                                <div class="text-left">
+                                    <input class="btn bg-main-1" (click)="submit()" value="✓">
+                                    <input style="float: right;" class="btn btn-danger" type="reset" value="X">
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                    <!--Form with header-->
+
+
+                </div>
+	</div>
+</div>

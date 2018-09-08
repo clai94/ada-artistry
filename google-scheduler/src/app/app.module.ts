@@ -1,3 +1,5 @@
+import { HttpClient, HttpHandler } from '@angular/common/http';
+import { BookingsService } from './services/bookings.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap/modal/modal.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -12,6 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CalendarModule } from 'angular-calendar';
 import { NgbModalStack } from '@ng-bootstrap/ng-bootstrap/modal/modal-stack';
 import { ScrollBar } from '@ng-bootstrap/ng-bootstrap/util/scrollbar';
+import { AppRoutingModule } from './/app-routing.module';
+import { ChildrenOutletContexts } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -25,12 +29,17 @@ import { ScrollBar } from '@ng-bootstrap/ng-bootstrap/util/scrollbar';
     BrowserAnimationsModule,
     FormsModule,
     CalendarModule.forRoot(),
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [
     NgbModal,
     NgbModalStack,
-    ScrollBar
+    ScrollBar,
+    ChildrenOutletContexts,
+    BookingsService,
+    HttpClient,
+    HttpHandler
   ],
   bootstrap: [AppComponent]
 })
