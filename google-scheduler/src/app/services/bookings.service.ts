@@ -14,9 +14,8 @@ export class BookingsService {
     date: string, time: string) {
       const header = new HttpHeaders({'Content-Type': 'application/json'});
       this.http.post<any>(this.endPoint, {'firstName': firstName, 'lastName' : lastName, 'phone': phone,
-      'email': email, 'date': date, 'time': time}, {headers: header})
-      .subscribe(res => {
+      'email': email, 'date': date, 'time': time}, {headers: header}).subscribe(res => {
         console.log(res);
-      } );
+      });
   }
 }
