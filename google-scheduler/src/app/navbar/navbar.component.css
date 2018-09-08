@@ -1,4 +1,5 @@
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css?family=Poppins:300');
 
 .bg-main-1 {
 	background-color: pink;
@@ -14,8 +15,7 @@
   font-size: 0.75rem;
   position: absolute;
   right: 0;
-  font-family: sans-serif;
-}
+  font-family: 'Poppins', sans-serif;}
 
 .navbar-icon-top .navbar-nav .nav-link > .fa {
   top: 3px;

@@ -25,6 +25,7 @@ import { AftercareComponent } from './views/aftercare/aftercare.component';
 import { PolicyComponent } from './views/policy/policy.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { RatesComponent } from './views/rates/rates.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { RatesComponent } from './views/rates/rates.component';
     AftercareComponent,
     PolicyComponent,
     ContactComponent,
-    RatesComponent
+    RatesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
