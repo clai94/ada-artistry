@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'faq' , component: FaqComponent},
   { path: 'gallery', component: GalleryComponent},
   { path: 'aftercare', component: AftercareComponent},
-  { path: 'policy', component: PolicyComponent},
+  { path: 'policies', component: PolicyComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'rates', component: RatesComponent}
 ];
