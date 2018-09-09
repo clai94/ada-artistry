@@ -1,3 +1,4 @@
+import { AdminComponent } from './views/admin/admin.component';
 import { LandingComponent } from './views/landing/landing.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { PolicyComponent } from './views/policy/policy.component';
@@ -11,15 +12,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { RatesComponent } from './views/rates/rates.component';
 
 const routes: Routes = [
-  { path: '', component: LandingComponent },
-  { path: 'booking', component: TestFormComponent },
+  { path: '', component: LandingComponent},
+  { path: 'booking', component: TestFormComponent},
   { path: 'about', component: AboutComponent},
   { path: 'faq' , component: FaqComponent},
   { path: 'gallery', component: GalleryComponent},
   { path: 'aftercare', component: AftercareComponent},
   { path: 'policies', component: PolicyComponent},
   { path: 'contact', component: ContactComponent},
-  { path: 'rates', component: RatesComponent}
+  { path: 'rates', component: RatesComponent},
+  { path: 'adawiththebrows', component: AdminComponent}
 ];
 
 @NgModule({
