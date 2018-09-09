@@ -1,3 +1,4 @@
+import { CalendarComponent } from './components/calendar/calendar.component';
 import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http';
 import { BookingsService } from './services/bookings.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap/modal/modal.module';
@@ -8,7 +9,6 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TestFormComponent } from './test-form/test-form.component';
-import { CalendarComponent } from './calendar/calendar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CalendarModule } from 'angular-calendar';
@@ -51,7 +51,7 @@ import { FooterComponent } from './components/footer/footer.component';
     CalendarModule.forRoot(),
     NgbModule.forRoot(),
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     NgbModal,
@@ -63,4 +63,3 @@ import { FooterComponent } from './components/footer/footer.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
