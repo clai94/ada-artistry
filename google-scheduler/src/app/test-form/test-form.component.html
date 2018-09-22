@@ -15,8 +15,8 @@
                             <h2>Looking to make an appointment?</h2>
                             <hr/>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit duis tristique sollicitudin nibh sit amet commodo. Sed risus ultricies tristique nulla aliquet enim tortor. In massa tempor nec feugiat nisl pretium fusce id velit. Elit sed vulputate mi sit amet mauris commodo quis. Vel orci porta non pulvinar neque laoreet. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Urna condimentum mattis pellentesque id nibh tortor id aliquet lectus. Duis ut diam quam nulla. Facilisi morbi tempus iaculis urna id volutpat lacus. Ridiculus mus mauris vitae ultricies leo integer malesuada nunc. Vulputate ut pharetra sit amet aliquam id diam maecenas. Libero volutpat sed cras ornare. Turpis massa tincidunt dui ut ornare lectus sit. Magna fermentum iaculis eu non diam phasellus vestibulum lorem sed. Faucibus a pellentesque sit amet porttitor eget dolor morbi non. Tempor nec feugiat nisl pretium. Eget nullam non nisi est.
-                            Vitae sapien pellentesque habitant morbi tristique. Egestas sed sed risus pretium. Diam vulputate ut pharetra sit amet aliquam. At lectus urna duis convallis convallis. Sodales neque sodales ut etiam. Justo laoreet sit amet cursus. Quisque sagittis purus sit amet volutpat consequat mauris nunc congue. Urna nunc id cursus metus aliquam. Sit amet facilisis magna etiam tempor orci. Consectetur adipiscing elit pellentesque habitant.
+                           Fill in the required fields on the right with your contact information as well as the requested time and we will get back to you as soon as possible if we have the time available for you. 
+                           <br><br> Please note that our business hours are from 10:00AM - 7:00PM from Monday to Friday. Each appointment can last anywhere from 2 to 3 hours, please allocate enough time for your scheduled appointment.
                         </p>
                     </div>
                     <div class="col-6 col-lg-6 col-md-6 col-sm-6">
@@ -76,7 +76,7 @@
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"><i class="fa fa-clock text-info"></i></div>
                                         </div>
-                                        <input required [(ngModel)]='time' name="time" type="time" class="form-control" placeholder="time of booking">
+                                        <input required [(ngModel)]='time' name="time" min="10:00" max="16:00" step="10800" type="time" class="form-control" placeholder="time of booking">
                                       </div>
                                 </div>
                                 <div class="text-left">

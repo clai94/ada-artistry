@@ -1,3 +1,7 @@
+/**
+ * @file Handles the logic for the booking component.
+ * @author Calvin Lai
+ */
 import { BookingsService } from './../services/bookings.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -6,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './test-form.component.html',
   styleUrls: ['./test-form.component.css']
 })
+
+/**
+ * Class representing the component.
+ */
 export class TestFormComponent implements OnInit {
 
-  constructor(private bookingService: BookingsService) { }
+  /**
+   * @param {BookingsService} bookingService - The service provider for bookings.
+   */
+  constructor(
+    private bookingService: BookingsService
+    ) { }
+
   firstName: string;
   lastName: string;
   phone: string;
@@ -16,11 +30,22 @@ export class TestFormComponent implements OnInit {
   date: string;
   time: string;
 
+  /**
+   * Initializes the component.
+   */
   ngOnInit() {
   }
 
+  /**
+   * Creates a booking request using user input.
+   */
   submit() {
-    this.bookingService.createBooking(this.firstName, this.lastName,
-     this.phone, this.email, this.date, this.time);
+    if (this.bookingService.createBooking(this.firstName, this.lastName,
+     this.phone, this.email, this.date, this.time)) {
+      console.log('success');
+     } else {
+       console.log('fail');
+     }
   }
+
 }
