@@ -27,6 +27,7 @@
 						</p>
 				</div>
 				<div class='col-6 col-lg-6 col-md-6 col-sm-6'>
+					<!--
 					<form action="action_page.php">
 						<label for="fname">First Name</label>
 						<input type="text" [(ngModel)]='fname' id="first_name" name="first_name" placeholder="first name" required>
@@ -38,6 +39,17 @@
 						<textarea [(ngModel)]='comment' id="comment" name="comment" placeholder="..." required style="height:200px"></textarea>
 						<input class="btn bg-main-1" (click)="submit()" value="Submit">
 					</form>
+				-->
+				<form onsubmit="sendEmail(event)">
+					<label for="name-field">Name</label>
+      				<input type="text" class="form-control" id="name-field" name="name-field" placeholder="Your name" required>
+      				<label for="email-field">Email</label>
+      				<input type="email" class="form-control" id="email-field" name="email-field" placeholder="Email address" required>
+      				<label for="body-field">Message</label>
+      				<textarea id="body-field" name="body-field" class="form-control" placeholder="Type your message here" required></textarea>
+      				<button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+				</form>
+
 				</div>
 			</div>
 		</div>

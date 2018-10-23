@@ -1,4 +1,4 @@
-import { ContactFormService } from '../../services/bookings.service';
+import { ContactFormService } from '../../services/contact-form.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -23,6 +23,10 @@ export class ContactComponent implements OnInit {
 
   submit(){
 
+  }
+
+  sendEmail(e){
+  	console.log('sent');
   }
 
 }
