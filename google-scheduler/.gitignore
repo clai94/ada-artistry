@@ -39,3 +39,5 @@ Thumbs.db
 # others #
 *.vscode
 tsconfig.json
+node_modules
+.package 2.json.icloud

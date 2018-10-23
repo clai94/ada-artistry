@@ -38,6 +38,7 @@ export class BookingsService {
     ) { }
 
   endPoint = 'https://script.google.com/macros/s/AKfycbxrZdSrah88Qah8Ksm8bBcXMPiZpVXlXc4An4MSKQ/exec';
+
   /**
    * Creates a booking with the specified user info.
    * @param firstName - Someone's first name.
@@ -48,33 +49,14 @@ export class BookingsService {
    * @param time - The time of the appointment.
    * @return Returns true if booking was created succesfuly, else false.
    */
-  createBooking(firstName: string, lastName: string, phone: string, email: string,
+  async createBooking(firstName: string, lastName: string, phone: string, email: string,
     date: string, time: string) {
       const booking = new Booking(firstName, lastName, phone, email, date, time);
-      // const data = [date, booking];
-      // this.database.list('/requests').push(data);
-      // this.database.database.ref('/request').child(date).child(time).child(phone).set(booking);
-      this.database.database.ref('/request').child(date).child(time).child(phone).set(booking);
-
-      // this.database.database.ref('/request').child(date).child(time).once('value').then(function(snapshot) {
-      //   if (snapshot.val()) {
-      //     console.log(snapshot.val());
-      //     console.log('exists');
-      //     return true;
-      //   } else {
-      //     console.log('does not exist');
-      //     this.database.database.ref('/request').child(date).child(time).child(phone).set(booking);
-      //     return false;
-      //   }
-      // });
-
-      // if (!this.checkExistingBooking(date, time)) {
-      //   // this.database.database.ref('/request').child(date).child(time).child(phone).set(booking);
-      //   console.log('created');
-      //   return true;
-      // } else {
-      //   return false;
-      // }// this.database.list
+      return this.database.database.ref('/requests').child(date).child(time).child(phone).set(booking).then(() => {
+        console.log('Successfully written');
+      }, () => {
+        console.log('Error');
+      });
   }
 
   /**
@@ -83,20 +65,26 @@ export class BookingsService {
    * @param {string} time - The time of the appointment.
    * @returns Returns true if the appointment exists, else false.
    */
-  checkExistingBooking(firstName: string, lastName: string, phone: string, email: string,
-    date: string, time: string, func: any) {
-    this.database.database.ref('/request').child(date).child(time).once('value').then(function(snapshot) {
-      if (snapshot.val()) {
-        console.log(snapshot.val());
+  checkExistingBooking(date: string, time: string) {
+    let nib = false;
+    this.database.database.ref('/requests').child(date).child(time).on('value', function(snapshot) {
+      console.log(snapshot.val());
+      if (snapshot.val() != null) {
         console.log('exists');
-        return true;
+        nib = true;
+        console.log(nib);
       } else {
-        console.log('does not exist');
-        func(firstName, lastName, phone, email,
-          date, time);
-        // this.database.database.ref('/request').child(date).child(time).child(phone).set(booking);
-        return false;
+        console.log('does not exists');
+        nib = false;
+        console.log(nib);
       }
+    }, function (errorObject) {
+      console.log('The read failed' + errorObject.code);
     });
+    return this.beb(nib);
+  }
+
+  beb(nib) {
+    return nib;
   }
 }

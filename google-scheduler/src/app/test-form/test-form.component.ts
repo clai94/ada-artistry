@@ -23,12 +23,12 @@ export class TestFormComponent implements OnInit {
     private bookingService: BookingsService
     ) { }
 
-  firstName: string;
-  lastName: string;
-  phone: string;
-  email: string;
-  date: string;
-  time: string;
+  firstName = null;
+  lastName = null;
+  phone = null;
+  email = null;
+  date = null;
+  time = null;
 
   /**
    * Initializes the component.
@@ -40,12 +40,49 @@ export class TestFormComponent implements OnInit {
    * Creates a booking request using user input.
    */
   submit() {
-    if (this.bookingService.createBooking(this.firstName, this.lastName,
-     this.phone, this.email, this.date, this.time)) {
-      console.log('success');
-     } else {
-       console.log('fail');
-     }
+    if (this.firstName === null) {
+      this.display('Missing field(s)!');
+      return;
+    }
+    if (this.lastName === null) {
+      this.display('Missing field(s)!');
+      return;
+    }
+    if (this.phone === null) {
+      this.display('Missing field(s)!');
+      return;
+    }
+    if (this.email === null) {
+      this.display('Missing field(s)!');
+      return;
+    }
+    if (this.date === null) {
+      this.display('Missing field(s)!');
+      return;
+    }
+    if (this.time === null) {
+      this.display('Missing field(s)!');
+      return;
+    }
+    console.log((this.bookingService.checkExistingBooking(this.date, this.time)));
+
+    if (!this.bookingService.checkExistingBooking(this.date, this.time)) {
+      if (this.bookingService.createBooking(this.firstName, this.lastName,
+        this.phone, this.email, this.date, this.time)) {
+          this.display('Successfully booked!');
+        } else {
+          this.display('Could not book!');
+        }
+    } else {
+      this.display('Could not book, existing appointment exists');
+    }
   }
 
+  /**
+   * Displays an alert with the specified message.
+   * @param {string} message the message to display
+   */
+  display(message) {
+    alert(message);
+  }
 }
