@@ -41,4 +41,7 @@ Thumbs.db
 tsconfig.json
 node_modules
 .package 2.json.icloud
+<<<<<<< HEAD
 
+=======
+>>>>>>> firebaseAuth

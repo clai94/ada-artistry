@@ -6,6 +6,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
 
 import { AppComponent } from './app.component';
 import { TestFormComponent } from './test-form/test-form.component';
@@ -27,6 +31,15 @@ import { ContactComponent } from './views/contact/contact.component';
 import { RatesComponent } from './views/rates/rates.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AdminComponent } from './views/admin/admin.component';
+
+export const firebaseConfig = {
+    apiKey: 'AIzaSyCBUtuOCz1iGv3CwhHVguVy_EVZw6ZS7nM',
+    authDomain: 'adas-artistry.firebaseapp.com',
+    databaseURL: 'https://adas-artistry.firebaseio.com',
+    projectId: 'adas-artistry',
+    storageBucket: 'adas-artistry.appspot.com',
+    messagingSenderId: '237915865962'
+};
 
 @NgModule({
   declarations: [
@@ -52,6 +65,9 @@ import { AdminComponent } from './views/admin/admin.component';
     FormsModule,
     CalendarModule.forRoot(),
     NgbModule.forRoot(),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     AppRoutingModule,
     HttpClientModule,
   ],
@@ -61,6 +77,7 @@ import { AdminComponent } from './views/admin/admin.component';
     ScrollBar,
     ChildrenOutletContexts,
     BookingsService,
+    AngularFireModule,
   ],
   bootstrap: [AppComponent]
 })
