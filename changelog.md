@@ -1,5 +1,8 @@
 #Change Log
 
+Team membership: 
+  Calvin Lai - CL
+  Alex Yang - AY
 Changelog format: 
   [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 
 Coding Style Conventions: 
@@ -7,5 +10,5 @@ Coding Style Conventions:
 
 ## [Unreleased]
 ## [0.0.1] 2018-10-23
-### Merged all pre existing branches to develop
+### Merged all pre existing branches to develop - CL
 - Cleared out all old branches
