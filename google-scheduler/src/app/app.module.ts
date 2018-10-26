@@ -31,6 +31,7 @@ import { ContactComponent } from './views/contact/contact.component';
 import { RatesComponent } from './views/rates/rates.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AdminComponent } from './views/admin/admin.component';
+import { PaymentComponent } from './components/payment/payment.component';
 
 export const firebaseConfig = {
     apiKey: 'AIzaSyCBUtuOCz1iGv3CwhHVguVy_EVZw6ZS7nM',
@@ -57,7 +58,8 @@ export const firebaseConfig = {
     ContactComponent,
     RatesComponent,
     FooterComponent,
-    AdminComponent
+    AdminComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
