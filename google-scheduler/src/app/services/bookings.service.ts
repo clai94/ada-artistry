@@ -7,17 +7,17 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AngularFireDatabase } from 'angularfire2/database';
 
-class Booking {
+// class Booking {
 
-  constructor(
-    public firstName: string,
-    public lastName: string,
-    public phone: string,
-    public email: string,
-    public date: string,
-    public time: string) {
-  }
-}
+//   constructor(
+//     public firstName: string,
+//     public lastName: string,
+//     public phone: string,
+//     public email: string,
+//     public date: string,
+//     public time: string) {
+//   }
+// }
 
 /**
  * Class representing the service.
@@ -29,7 +29,7 @@ class Booking {
 export class BookingsService {
 
   /**
-   * The constructor for the service
+   * The constructor for the service.
    * @param {HttpClient} http - The http client responsible for HTTP requests.
    */
   constructor(
@@ -37,7 +37,7 @@ export class BookingsService {
     private database: AngularFireDatabase
     ) { }
 
-  endPoint = 'https://script.google.com/macros/s/AKfycbxrZdSrah88Qah8Ksm8bBcXMPiZpVXlXc4An4MSKQ/exec';
+  endPoint = 'https://script.google.com/macros/s/AKfycbwLe6oygUNJcxggC10EId-AMfjR1DQ2BwDrlYMsIFkehPZnFsc/exec';
 
   /**
    * Creates a booking with the specified user info.
@@ -51,12 +51,33 @@ export class BookingsService {
    */
   async createBooking(firstName: string, lastName: string, phone: string, email: string,
     date: string, time: string) {
-      const booking = new Booking(firstName, lastName, phone, email, date, time);
-      return this.database.database.ref('/requests').child(date).child(time).child(phone).set(booking).then(() => {
+
+      const booking = {
+        'firstName': firstName,
+        'lastName': lastName,
+        'phone': phone,
+        'email': email,
+        'date': date,
+        'time': time
+      };
+
+      return this.database.database.ref('/pendingRequests').push(booking).then(() => {
+        // this.sendConfirmationEmail(email);
         console.log('Successfully written');
       }, () => {
         console.log('Error');
       });
+  }
+
+  /**
+   * Sends a confirmation email to the specified email.
+   * @param email the email to send the confirmation email
+   */
+  sendConfirmationEmail(email: string) {
+    const header = new HttpHeaders({contentType: 'application/x-www-form-urlencoded; charset=UTF-8'});
+    this.http.get<any>(this.endPoint).subscribe(result => {
+      console.log(result);
+    });
   }
 
   /**
@@ -67,7 +88,7 @@ export class BookingsService {
    */
   checkExistingBooking(date: string, time: string) {
     let nib = false;
-    this.database.database.ref('/requests').child(date).child(time).on('value', function(snapshot) {
+    this.database.database.ref('/pendingRequests').child(date).child(time).on('value', function(snapshot) {
       console.log(snapshot.val());
       if (snapshot.val() != null) {
         console.log('exists');
@@ -86,5 +107,16 @@ export class BookingsService {
 
   beb(nib) {
     return nib;
+  }
+
+  /**
+   * Retreives all existing bookings.
+   * @param func the completion callback function
+   */
+  getBookings(func: any) {
+    this.database.database.ref('/pendingRequests').on('value', function(snapshot) {
+      console.log(snapshot.val());
+      func(snapshot.val());
+    });
   }
 }

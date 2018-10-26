@@ -17,6 +17,7 @@ import { Component, OnInit } from '@angular/core';
 export class TestFormComponent implements OnInit {
 
   /**
+   * Constructor for the class.
    * @param {BookingsService} bookingService - The service provider for bookings.
    */
   constructor(
@@ -29,11 +30,21 @@ export class TestFormComponent implements OnInit {
   email = null;
   date = null;
   time = null;
+  bookings: any;
 
   /**
    * Initializes the component.
    */
   ngOnInit() {
+    this.bookingService.getBookings(this.loadingComplete.bind(this));
+  }
+
+  /**
+   * Completion callback called when bookings are loaded.
+   */
+  loadingComplete(result: any) {
+    this.bookings = result;
+    console.log((this.bookings));
   }
 
   /**
@@ -64,18 +75,34 @@ export class TestFormComponent implements OnInit {
       this.display('Missing field(s)!');
       return;
     }
-    console.log((this.bookingService.checkExistingBooking(this.date, this.time)));
 
-    if (!this.bookingService.checkExistingBooking(this.date, this.time)) {
+    if (!this.checkExistingBooking(this.date, this.time)) {
       if (this.bookingService.createBooking(this.firstName, this.lastName,
         this.phone, this.email, this.date, this.time)) {
           this.display('Successfully booked!');
+          this.bookingService.getBookings(this.loadingComplete.bind(this));
         } else {
           this.display('Could not book!');
         }
     } else {
       this.display('Could not book, existing appointment exists');
     }
+  }
+
+  /**
+   * Checks if there is an existing booking.
+   * @param date the date of the booking
+   * @param time the time of the booking
+   * @return returns true if exists, else false
+   */
+  checkExistingBooking(date: string, time: string) {
+    for (const i in this.bookings) {
+      if (this.bookings[i].date === date && this.bookings[i].time === time) {
+        console.log('func checkExistingBooking says: Booking exists!');
+        return true;
+      }
+    }
+    return false;
   }
 
   /**
