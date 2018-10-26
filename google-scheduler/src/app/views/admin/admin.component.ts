@@ -47,7 +47,8 @@ export class AdminComponent implements OnInit {
   submit() {
     this.auth.auth.signInWithEmailAndPassword(this.username, this.password).then(value => {
       console.log('Nice, it worked!');
-      this.router.navigate(['/booking']);
+      localStorage.setItem('admin', 'confirmed');
+      this.router.navigate(['/admin-console']);
   })
     .catch(err => {
       console.log('Something went wrong:', err.message);

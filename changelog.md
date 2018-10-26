@@ -9,6 +9,27 @@ Coding Style Conventions:
   Allman Notation indentation style
 
 # [Unreleased]
+# [0.0.5] 2018-10-26
+## Added by Calvin
+###pending-table-entry component
+- added to handle pending requests in the admin console
+###admin-console view
+- view reached upon successful admin login
+- added some verification via local storage, redirects on invalid access
+## Modified by Calvin
+###admin.component.ts
+- added routing for successful login
+
+# [0.0.4] 2018-10-26
+## Added by Calvin
+###components/payment
+- added braintree
+###assets
+- logo image
+## Modified by Calvin
+###test-form.component.html
+- added button for payments
+
 # [0.0.3] 2018-10-25
 ## Modified by Calvin
 ###services/bookings.service.ts
