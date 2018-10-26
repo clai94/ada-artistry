@@ -40,14 +40,15 @@
 						<input class="btn bg-main-1" (click)="submit()" value="Submit">
 					</form>
 				-->
-				<form onsubmit="sendEmail(event)">
+				<form>
 					<label for="name-field">Name</label>
-      				<input type="text" class="form-control" id="name-field" name="name-field" placeholder="Your name" required>
+      				<input type="text" [(ngModel)]='name' class="form-control" id="name-field" name="name-field" placeholder="Your name" required>
       				<label for="email-field">Email</label>
-      				<input type="email" class="form-control" id="email-field" name="email-field" placeholder="Email address" required>
+      				<input type="email" [(ngModel)]='email' class="form-control" id="email" name="email" placeholder="email" required>
       				<label for="body-field">Message</label>
-      				<textarea id="body-field" name="body-field" class="form-control" placeholder="Type your message here" required></textarea>
-      				<button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+      				<textarea [(ngModel)]='comment' id="comment-field" name="comment-field" class="form-control" placeholder="Type your message here" required></textarea>
+      				<!--<button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button> -->
+      				<input class="btn bg-main-1" (click)="submit()" value="Submit">
 				</form>
 
 				</div>
