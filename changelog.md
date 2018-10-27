@@ -15,6 +15,7 @@ Coding Style Conventions:
 - fixed broken social media icons
 - removed blog posts section
 - slight edits to footer text
+- updated footer information, changed color to pink, added store hours
 ###navbar.html
 - swapped placeholder logo with actual logo, needs further work
 ## Added by Alex
