@@ -17,6 +17,9 @@ Coding Style Conventions:
 - slight edits to footer text
 ###navbar.html
 - swapped placeholder logo with actual logo, needs further work
+## Added by Alex
+###contact.component.ts
+- added call to google scripts
 
 # [0.0.5] 2018-10-26
 ## Added by Calvin
