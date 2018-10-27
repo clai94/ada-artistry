@@ -9,6 +9,10 @@ Coding Style Conventions:
   Allman Notation indentation style
 
 # [Unreleased]
+# [0.0.6] 2018-10-26
+## Added by Alex
+###contact.component.ts
+- added call to google scripts
 # [0.0.5] 2018-10-26
 ## Added by Calvin
 ###pending-table-entry component
