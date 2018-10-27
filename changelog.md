@@ -9,6 +9,15 @@ Coding Style Conventions:
   Allman Notation indentation style
 
 # [Unreleased]
+# [0.0.6] 2018-10-26
+## Modified by Calvin
+###component/footer.html
+- fixed broken social media icons
+- removed blog posts section
+- slight edits to footer text
+###navbar.html
+- swapped placeholder logo with actual logo, needs further work
+
 # [0.0.5] 2018-10-26
 ## Added by Calvin
 ###pending-table-entry component
