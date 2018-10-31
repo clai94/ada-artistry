@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class AdminConsoleComponent implements OnInit {
 
   bookings: any;
+  showMsg = 'Show Pending Appointments';
 
   constructor(
     private router: Router,
@@ -27,11 +28,15 @@ export class AdminConsoleComponent implements OnInit {
   }
 
   loadingComplete(result) {
-    console.log(Object.keys(result));
     for (const i in result) {
       if (true) {
         this.bookings.push(result[i]);
       }
     }
+  }
+
+  showPendingAppointments() {
+    this.showMsg = 'Pending Appointments';
+    this.bookings = [...this.bookings];
   }
 }

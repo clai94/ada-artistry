@@ -12,7 +12,7 @@ export class PendingTableEntryComponent implements OnInit {
   @Input() booking: any;
 
   ngOnInit() {
-    console.log(this.booking);
+    console.log("oninit from pending table");
   }
 
 }
