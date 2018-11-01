@@ -1,0 +1,9 @@
+<button class="btn btn-default" (click)='showPendingAppointments()'>{{showMsg}}</button>
+<table class="table">
+    <tr>
+      <th *ngFor="let c of headers">
+        {{c}}
+      </th>
+    </tr>
+    <app-pending-table-entry [booking]='booking' *ngFor="let booking of bookings"></app-pending-table-entry>
+</table>

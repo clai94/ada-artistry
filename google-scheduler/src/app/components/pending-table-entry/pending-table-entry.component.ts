@@ -1,3 +1,4 @@
+import { BookingsService } from './../../services/bookings.service';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -5,14 +6,31 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './pending-table-entry.component.html',
   styleUrls: ['./pending-table-entry.component.css']
 })
+
+/**
+ * Controller for the component.
+ */
 export class PendingTableEntryComponent implements OnInit {
 
-  constructor() { }
+  /**
+   * Constructor.
+   */
+  constructor(
+    private bookingService: BookingsService
+  ) { }
 
   @Input() booking: any;
 
+  /**
+   * Called on initialization.
+   */
   ngOnInit() {
-    console.log("oninit from pending table");
   }
 
+  /**
+   * Confirms a booking. Adds the selected booking to the confirmed bookings table.
+   */
+  confirmBooking() {
+    // this.bookingService.confirmBooking();
+  }
 }

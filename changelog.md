@@ -9,6 +9,31 @@ Coding Style Conventions:
   Allman Notation indentation style
 
 # [Unreleased]
+# [0.0.7] 2018-10-31
+## Modified by Calvin
+###views/admin-console.html
+- moved table DOM elements to corresponding component
+###views/admin-console.ts
+- moved retrieval of bookings to pending table component
+###components/pending-table-entry.ts
+- added unimplemented function to approve selected booking request
+## Added by Calvin
+###components/pending-table
+- component to contain the pending table entries
+
+# [0.0.6] 2018-10-26
+## Modified by Calvin
+###component/footer.html
+- fixed broken social media icons
+- removed blog posts section
+- slight edits to footer text
+- updated footer information, changed color to pink, added store hours
+###navbar.html
+- swapped placeholder logo with actual logo, needs further work
+## Added by Alex
+###contact.component.ts
+- added call to google scripts
+
 # [0.0.5] 2018-10-26
 ## Added by Calvin
 ###pending-table-entry component

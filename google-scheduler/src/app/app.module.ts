@@ -33,6 +33,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AdminComponent } from './views/admin/admin.component';
 import { AdminConsoleComponent } from './views/admin-console/admin-console.component';
 import { PendingTableEntryComponent } from './components/pending-table-entry/pending-table-entry.component';
+import { PendingTableComponent } from './components/pending-table/pending-table.component';
 
 export const firebaseConfig = {
     apiKey: 'AIzaSyCBUtuOCz1iGv3CwhHVguVy_EVZw6ZS7nM',
@@ -61,7 +62,8 @@ export const firebaseConfig = {
     FooterComponent,
     AdminComponent,
     AdminConsoleComponent,
-    PendingTableEntryComponent
+    PendingTableEntryComponent,
+    PendingTableComponent
   ],
   imports: [
     BrowserModule,
