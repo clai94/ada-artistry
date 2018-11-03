@@ -9,55 +9,64 @@ Coding Style Conventions:
   Allman Notation indentation style
 
 # [Unreleased]
+# [0.0.8] 2018-11-02
+## Modified by Calvin
+### services/bookings.service.ts
+- added confirmBooking and declineBooking functions
+- not yet tested
+### components/pending-table-entry
+- added onclick functions to approve and decline buttons
+- functions not yet implemented
+
 # [0.0.7] 2018-10-31
 ## Modified by Calvin
-###views/admin-console.html
+### views/admin-console.html
 - moved table DOM elements to corresponding component
-###views/admin-console.ts
+### views/admin-console.ts
 - moved retrieval of bookings to pending table component
-###components/pending-table-entry.ts
+### components/pending-table-entry.ts
 - added unimplemented function to approve selected booking request
 ## Added by Calvin
-###components/pending-table
+### components/pending-table
 - component to contain the pending table entries
 
 # [0.0.6] 2018-10-26
 ## Modified by Calvin
-###component/footer.html
+### component/footer.html
 - fixed broken social media icons
 - removed blog posts section
 - slight edits to footer text
 - updated footer information, changed color to pink, added store hours
-###navbar.html
+### navbar.html
 - swapped placeholder logo with actual logo, needs further work
 ## Added by Alex
-###contact.component.ts
+### contact.component.ts
 - added call to google scripts
 
 # [0.0.5] 2018-10-26
 ## Added by Calvin
-###pending-table-entry component
+### pending-table-entry component
 - added to handle pending requests in the admin console
-###admin-console view
+### admin-console view
 - view reached upon successful admin login
 - added some verification via local storage, redirects on invalid access
 ## Modified by Calvin
-###admin.component.ts
+### admin.component.ts
 - added routing for successful login
 
 # [0.0.4] 2018-10-26
 ## Added by Calvin
-###components/payment
+### components/payment
 - added braintree
-###assets
+### assets
 - logo image
 ## Modified by Calvin
-###test-form.component.html
+### test-form.component.html
 - added button for payments
 
 # [0.0.3] 2018-10-25
 ## Modified by Calvin
-###services/bookings.service.ts
+### services/bookings.service.ts
 - completed a getBookings function
 - added a send email confirmation function
 - inserting to database now uses push() instead of set()

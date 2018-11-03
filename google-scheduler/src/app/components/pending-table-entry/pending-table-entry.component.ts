@@ -33,4 +33,11 @@ export class PendingTableEntryComponent implements OnInit {
   confirmBooking() {
     // this.bookingService.confirmBooking();
   }
+
+  /**
+   * Declines a booking, archieves customer information.
+   */
+  declineBooking() {
+    //
+  }
 }
