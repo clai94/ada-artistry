@@ -1,0 +1,9 @@
+<tr>
+  <td scope="col">{{booking.date}}</td>
+  <td scope="col">{{booking.time}}</td>
+  <td scope="col">{{booking.firstName}} {{booking.lastName}}</td>
+  <td scope="col">{{booking.phone}}</td>
+  <td scope="col">{{booking.email}}</td>
+  <td scope="col"><button (click)="confirmBooking()" class="btn btn-info">Approve</button></td>
+  <td scope="col"><button (click)="declineBooking()" class="btn btn-danger">Decline</button></td>
+</tr>

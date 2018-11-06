@@ -1,3 +1,4 @@
+import { AdminConsoleComponent } from './views/admin-console/admin-console.component';
 import { AdminComponent } from './views/admin/admin.component';
 import { LandingComponent } from './views/landing/landing.component';
 import { ContactComponent } from './views/contact/contact.component';
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'policies', component: PolicyComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'rates', component: RatesComponent},
-  { path: 'adawiththebrows', component: AdminComponent}
+  { path: 'adawiththebrows', component: AdminComponent},
+  { path: 'admin-console', component: AdminConsoleComponent}
 ];
 
 @NgModule({

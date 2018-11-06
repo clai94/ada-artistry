@@ -62,7 +62,7 @@ export class BookingsService {
       };
 
       return this.database.database.ref('/pendingRequests').push(booking).then(() => {
-        // this.sendConfirmationEmail(email);
+        // this.sendPendingEmail(email);
         console.log('Successfully written');
       }, () => {
         console.log('Error');
@@ -102,11 +102,65 @@ export class BookingsService {
     }, function (errorObject) {
       console.log('The read failed' + errorObject.code);
     });
-    return this.beb(nib);
+    return nib;
   }
 
-  beb(nib) {
-    return nib;
+  /**
+   * Moves pending booking to confirmed booking.
+   * @param firstName - Someone's first name.
+   * @param lastName - Someone's last name.
+   * @param phone - Someone's phone number.
+   * @param email - Someone's email address.
+   * @param date - The date of the appointment.
+   * @param time - The time of the appointment.
+   * @return Returns true if booking was confirmed succesfully, else false.
+   */
+  async confirmBooking(date: string, time: string, firstName: string, lastName: string, phone: string, email: string) {
+
+    const booking = {
+      'firstName': firstName,
+      'lastName': lastName,
+      'phone': phone,
+      'email': email,
+      'date': date,
+      'time': time
+    };
+
+    return this.database.database.ref('/confirmedBookings').push(booking).then(() => {
+      // this.sendConfirmationEmail(email);
+      console.log('Successfully confirmed.');
+    }, () => {
+      console.log('Error');
+    });
+  }
+
+  /**
+   * Moves pending booking to declined booking collection, archieves contact info.
+   * @param firstName - Someone's first name.
+   * @param lastName - Someone's last name.
+   * @param phone - Someone's phone number.
+   * @param email - Someone's email address.
+   * @param date - The date of the appointment.
+   * @param time - The time of the appointment.
+   * @return Returns true if booking was declined succesfully, else false.
+   */
+  async declineBooking(date: string, time: string, firstName: string, lastName: string, phone: string, email: string) {
+
+    const booking = {
+      'firstName': firstName,
+      'lastName': lastName,
+      'phone': phone,
+      'email': email,
+      'date': date,
+      'time': time
+    };
+
+    return this.database.database.ref('/declinedBookings').push(booking).then(() => {
+      // this.sendDeclineEmail(email);
+      console.log('Successfully declined.');
+    }, () => {
+      console.log('Error');
+    });
   }
 
   /**
