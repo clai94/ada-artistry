@@ -35,6 +35,8 @@ import { PaymentComponent } from './components/payment/payment.component';
 import { AdminConsoleComponent } from './views/admin-console/admin-console.component';
 import { PendingTableEntryComponent } from './components/pending-table-entry/pending-table-entry.component';
 import { PendingTableComponent } from './components/pending-table/pending-table.component';
+import { NgxBraintreeModule } from 'ngx-braintree';
+
 
 export const firebaseConfig = {
     apiKey: 'AIzaSyCBUtuOCz1iGv3CwhHVguVy_EVZw6ZS7nM',
@@ -62,7 +64,7 @@ export const firebaseConfig = {
     RatesComponent,
     FooterComponent,
     AdminComponent,
-    PaymentComponent
+    PaymentComponent,
     AdminConsoleComponent,
     PendingTableEntryComponent,
     PendingTableComponent
@@ -78,6 +80,7 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AppRoutingModule,
     HttpClientModule,
+    NgxBraintreeModule
   ],
   providers: [
     NgbModal,

@@ -86,8 +86,13 @@
                             </div>
                         </div>
                     </form>
-                    <app-payment></app-payment>
-                </div> <!-- panel -->
+                    <ngx-braintree 
+                    [clientTokenURL]="'http://localhost:3000/client_token'" 
+                    [createPurchaseURL]="'http://localhost:3000/pay'" 
+                    [chargeAmount]="10.00"
+                    (paymentStatus)="onPaymentStatus($event)">
+                    </ngx-braintree>
+                    </div> <!-- panel -->
                 </div>
                     <!--Form with header-->
 

@@ -9,6 +9,13 @@ Coding Style Conventions:
   Allman Notation indentation style
 
 # [Unreleased]
+# [0.0.9] 2019-11-06
+## Modified by Calvin
+### components/test-form.component.html
+- added the braintree drop-in UI
+### components/payment.component.ts
+- unused atm
+
 # [0.0.8] 2018-11-02
 ## Modified by Calvin
 ### services/bookings.service.ts
