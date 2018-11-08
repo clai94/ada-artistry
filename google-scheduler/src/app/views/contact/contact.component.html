@@ -7,7 +7,7 @@
 					<h1>Contact</h1>
 				</div>
 				<div class="panel-body">
-					<div class='col-6 col-lg-6 col-md-6 col-sm-6'>
+					<div class='col-xs-12 col-sm-6'>
 						<h2>Email:</h2>
 						<hr/>
 						<p>
@@ -26,20 +26,7 @@
 							<a href="https://www.instagram.com/ada.artistry/?hl=en">@ada.artistry </a>
 						</p>
 				</div>
-				<div class='col-6 col-lg-6 col-md-6 col-sm-6'>
-					<!--
-					<form action="action_page.php">
-						<label for="fname">First Name</label>
-						<input type="text" [(ngModel)]='fname' id="first_name" name="first_name" placeholder="first name" required>
-						<label for="lname">Last Name</label>
-						<input type="text" [(ngModel)]='lname' id="last_name" name="first_name" placeholder="last name" required>
-						<label for="email">Email</label>
-						<input type="text" [(ngModel)]='email' id="email" name="email" placeholder="email" required>
-						<label for="subject">Comment</label>
-						<textarea [(ngModel)]='comment' id="comment" name="comment" placeholder="..." required style="height:200px"></textarea>
-						<input class="btn bg-main-1" (click)="submit()" value="Submit">
-					</form>
-				-->
+				<div class='col-xs-12 col-sm-6'>
 				<form>
 					<label for="name-field">Name</label>
       				<input type="text" [(ngModel)]='name' class="form-control" id="name-field" name="name-field" placeholder="Your name" required>
@@ -47,8 +34,7 @@
       				<input type="email" [(ngModel)]='email' class="form-control" id="email" name="email" placeholder="email" required>
       				<label for="body-field">Message</label>
       				<textarea [(ngModel)]='comment' id="comment-field" name="comment-field" class="form-control" placeholder="Type your message here" required></textarea>
-      				<!--<button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button> -->
-      				<input class="btn bg-main-1" (click)="submit()" value="Submit">
+      				<input style="width: 40%;" class="btn bg-main-1" (click)="submit()" value="Submit">
 				</form>
 
 				</div>
