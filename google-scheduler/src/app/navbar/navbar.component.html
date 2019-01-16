@@ -4,87 +4,62 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-main-1">
-  <a class="navbar-brand" routerLink="/"><i class="fas fa-eye"></i>3<i class="fas fa-eye"></i><br>@browswithada
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<div>
+  <div class=" header-div col-8 col-lg-8 col-md-8 col-sm-8 col-md-offset-2 col-lg-offset-2 col-sm-offset-2">
+    <header>
+      <a class="header" routerLink="/">
+        <img id='header-img' src="../../assets/images/adalog.png" alt="browswithada">
+      </a>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="">
-          <i class="fa fa-home"></i>
-          home
-          <span class="sr-only">(current)</span>
-          </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/about">
-          <i class="fa fa-info-circle">
-            <!-- <span class="badge badge-danger">11</span> -->
-          </i>
-          about
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/booking">
-          <i class="fa fa-calendar-alt">
-            <!-- <span class="badge badge-danger">11</span> -->
-          </i>
-          booking
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/faq">
-          <i class="fa fa-question-circle">
-            <!-- <span class="badge badge-danger">11</span> -->
-          </i>
-          faq
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/gallery">
-          <i class="fa fa-images">
-            <!-- <span class="badge badge-danger">11</span> -->
-          </i>
-          gallery
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/aftercare">
-          <i class="fa fa-exclamation-triangle">
-            <!-- <span class="badge badge-danger">11</span> -->
-          </i>
-          aftercare
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/policies">
-          <i class="fa fa-book">
-            <!-- <span class="badge badge-danger">11</span> -->
-          </i>
-          policies
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/contact">
-          <i class="fa fa-envelope">
-            <!-- <span class="badge badge-danger">11</span> -->
-          </i>
-          contact
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/rates">
-          <i class="fa fa-money-bill">
-            <!-- <span class="badge badge-danger">11</span> -->
-          </i>
-          rates
-        </a>
-      </li>
-    </ul>
 
+      <nav class='navbar navbar-default navbar-expand-lg'>
+        <div class='container-fluid'>
+          <!-- mobile view -->
+          <div class='navbar-header'>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <!-- links for toggling -->
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li>
+                <a routerLink="">Home</a>
+              </li>
+              <li>
+                <a routerLink="/gallery">Portfolio</a>
+              </li>
+              <li>
+                <a routerLink="/booking">Booking</a>
+              </li>
+              <li>
+                <a routerLink="/rates">Rates</a>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">About</a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class ="dropdown-list" routerLink="/faq">FAQ</a>
+                  </li>
+                  <li>
+                    <a class ="dropdown-list" routerLink="/aftercare">After Care</a>
+                  </li>
+                  <li>
+                    <a class ="dropdown-list" routerLink="/policies">Policies</a>
+                  </li>
+                  <li>
+                    <a class ="dropdown-list" routerLink="/contact">Contact</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
   </div>
-</nav>
+</div>

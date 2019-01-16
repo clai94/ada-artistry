@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-12 body-main">
+			<div class="panel">
+				<div class="panel-heading text-center">
+					<h1>Welcome back!</h1>
+				</div>
+				<div class="panel-body">
+					<div class='col-10 col-lg-10 col-md-10 col-sm-10 col-md-offset-1 col-lg-offset-1 col-sm-offset-1'>
+            <h2>Pending Appointments</h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Phone</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Approve</th>
+                  <th scope="col">Decline</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <app-pending-table-entry [booking]='booking' *ngFor="let booking of bookings"></app-pending-table-entry>
+              </tbody>
+            </table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

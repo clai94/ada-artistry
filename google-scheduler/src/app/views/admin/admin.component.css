@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:300');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 .bg-main-1 {
   background-color: pink;
 }
 
 .container {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }

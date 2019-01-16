@@ -31,6 +31,8 @@ import { ContactComponent } from './views/contact/contact.component';
 import { RatesComponent } from './views/rates/rates.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AdminComponent } from './views/admin/admin.component';
+import { AdminConsoleComponent } from './views/admin-console/admin-console.component';
+import { PendingTableEntryComponent } from './components/pending-table-entry/pending-table-entry.component';
 
 export const firebaseConfig = {
     apiKey: 'AIzaSyCBUtuOCz1iGv3CwhHVguVy_EVZw6ZS7nM',
@@ -57,7 +59,9 @@ export const firebaseConfig = {
     ContactComponent,
     RatesComponent,
     FooterComponent,
-    AdminComponent
+    AdminComponent,
+    AdminConsoleComponent,
+    PendingTableEntryComponent
   ],
   imports: [
     BrowserModule,
