@@ -46,9 +46,9 @@ export class ContactComponent implements OnInit {
 
   	try{
   		$.post(POST_URL, JSON.stringify(postRequest));
-  		this.name = '';
-  		this.email= '';
-  		this.comment= '';
+      this.name = '';
+      this.email= '';
+      this.comment= '';
   		return (alert('Thanks for contacting me!'));
   	} catch(err){
   		return (alert('Something went wrong!'));

@@ -4,19 +4,16 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-<div>
-  <div class=" header-div col-8 col-lg-8 col-md-8 col-sm-8 col-md-offset-2 col-lg-offset-2 col-sm-offset-2">
-    <header>
-      <a class="header" routerLink="/">
-        <img id='header-img' src="../../assets/images/adalog.png" alt="browswithada">
-      </a>
+<div class="container">
+  <!-- <div class=" header-div"> -->
+
 
 
       <nav class='navbar navbar-default navbar-expand-lg'>
-        <div class='container-fluid'>
+        <div class='container-nav'>
           <!-- mobile view -->
           <div class='navbar-header'>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" (click)="isCollapsed = !isCollapsed" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -25,7 +22,7 @@
           </div>
 
           <!-- links for toggling -->
-          <div class="collapse navbar-collapse">
+          <div class="collapse navbar-collapse justify-content-center" [ngbCollapse]="isCollapsed">
             <ul class="nav navbar-nav">
               <li>
                 <a routerLink="">Home</a>
@@ -60,6 +57,11 @@
           </div>
         </div>
       </nav>
+      <header class ='banner-img'>
+      <a class="header" routerLink="/">
+        <img id='header-img' src="../../assets/images/ada-logo2.png" alt="browswithada">
+      </a>
+
     </header>
-  </div>
+  <!-- </div> -->
 </div>

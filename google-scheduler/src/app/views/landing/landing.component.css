@@ -1,9 +1,24 @@
-.container {
+/*.container {
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
   border-radius: 5px;
   background-color: #f2f2f2;
-  /* background-image: '../../../assets/images/logo-ada.jpeg'; */
   padding: 20px;
 }
 
+*/
+
+.container{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
+}
+
+
+.jumbotron{
+  /* margin-top: 20px; */
+  background-image: url(/../assets/images/bg.jpg);
+  background-size: cover;
+  height: 75vh;
+  background-position: center;
+  margin-bottom: 0px;
+}
